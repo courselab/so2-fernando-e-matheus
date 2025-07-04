@@ -1,31 +1,19 @@
-#    SPDX-FileCopyrightText: 2021 Monaco F. J. <monaco@usp.br>
+#    SPDX-FileCopyrightText: 2001 Monaco F. J <monaco@usp.br>
 #
 #    SPDX-License-Identifier: GPL-3.0-or-later
 #
 #    This file is part of SYSeg, available at https://gitlab.com/monaco/syseg.
 
 ##
-## Example directory setup.
+## Configuration
 ##
 
-# Build rules specifics to the example in this directory.
+# Name the subdirs in this section.
 
-# BUILDRULES = build.mk
+SUBDIRS = abi  bl  build  crt  fat  foo  hw  make   posix  real  rop  run  tydos  tyfs  tyos  tyos32
 
-# Uncomment to include optional tools in the Makefile.
+include $(TOOL_DIR)/readme.mk
 
-# include $(TOOL_DIR)/bintools.mk   # Convenience rules for binary inspection.
-
-# List the files to include in the export bundle, if any.
-
-BUNDLE_FILES =
-
-BUNDLE_TOOLS  =
-
-##
-## Common deffinitons for example directories, not related to the examples.
-##
-
-include $(TOOL_DIR)/example.mk
+CLEANFILES = README 
 
 

@@ -1,1 +1,0 @@
-../../eg/tydos/kaux.h

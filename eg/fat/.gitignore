@@ -1,8 +1,0 @@
-*.img
-*.bin
-mbs.c
-*.o
-mkfat12-beta
-mkfat12
-mbrinfo
-fatinfo

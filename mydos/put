@@ -1,0 +1,59 @@
+#!/bin/bash
+#
+# Copy a file from the host OS into the disk image.
+#
+# Run with -h for usage.
+
+
+USAGE="Usage: $0 [-h] <file_name> <disk_image>"
+
+while getopts "r:s:h" opt; do
+    case "$opt" in
+	h) echo $USAGE
+	   exit 0
+	   ;;
+        \?)
+            echo $USAGE
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND -1))
+
+FILE=$1
+IMG=$2
+
+if ! test -f tyfsedit ; then
+    echo "tyfsedit not found (have you built it?)"
+    exit 1
+fi
+
+if test -z "$FILE" ; then
+    echo "$USAGE"
+    exit 1
+fi
+
+if test -z "$IMG" ; then
+    echo "$USAGE"
+    exit 1
+fi
+
+if ! test -f $FILE ; then
+    echo "$FILE not found"
+    exit 1
+fi
+
+if ! test -f $IMG ; then
+    echo "$IMG not found"
+    exit 1
+fi
+
+cmd=$(cat <<EOF
+open $IMG
+put $FILE
+quit
+EOF
+)
+
+echo "$cmd" | ./tyfsedit
+

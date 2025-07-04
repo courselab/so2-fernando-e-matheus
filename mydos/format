@@ -1,0 +1,55 @@
+#!/bin/bash
+#
+# Format a disk with tyfs.
+#
+# Run with -h for usage.
+# Default values: 1 reserved sector, max file size 2 blocks
+
+RESERVED=1
+SIZE=2
+
+USAGE="Usage: $0 [-h] | [-r reserved_sectors] [-s max_file_size] <file_name>"
+
+while getopts "r:s:h" opt; do
+    case "$opt" in
+	h) echo $USAGE
+	   exit 0
+	   ;;
+        r) RESERVED="$OPTARG" ;;
+        s) SIZE="$OPTARG" ;;
+        \?)
+            echo $USAGE
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND -1))
+
+IMG=$1
+
+if ! test -f tyfsedit ; then
+    echo "tyfsedit not found (have you built it?)"
+    exit 1
+fi
+
+if test -z "$IMG" ; then
+    echo "$USAGE"
+    exit 1
+fi
+
+if ! test -f $IMG ; then
+    echo "$IMG not found"
+    exit 1
+fi
+
+cmd=$(cat <<EOF
+open $IMG
+format
+$RESERVED
+$SIZE
+quit
+EOF
+)
+
+echo "$cmd" | ./tyfsedit
+

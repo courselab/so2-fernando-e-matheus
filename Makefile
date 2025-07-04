@@ -175,7 +175,7 @@ am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/build-aux/ltmain.sh \
 	$(top_srcdir)/build-aux/missing AUTHORS COPYING ChangeLog \
 	INSTALL NEWS README.md build-aux/ar-lib build-aux/compile \
-	build-aux/config.guess build-aux/config.sub \
+	build-aux/config.guess build-aux/config.sub build-aux/depcomp \
 	build-aux/install-sh build-aux/ltmain.sh build-aux/missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
@@ -221,13 +221,13 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg/build-aux/missing' aclocal-1.16
+ACLOCAL = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus/build-aux/missing' aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg/build-aux/missing' autoconf
-AUTOHEADER = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg/build-aux/missing' autoheader
-AUTOMAKE = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg/build-aux/missing' automake-1.16
+AUTOCONF = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus/build-aux/missing' autoconf
+AUTOHEADER = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus/build-aux/missing' autoheader
+AUTOMAKE = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus/build-aux/missing' automake-1.16
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -271,7 +271,7 @@ LIPO =
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAKEINFO = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg/build-aux/missing' makeinfo
+MAKEINFO = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus/build-aux/missing' makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -298,12 +298,12 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-TOOL_DIR = /home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg/tools
+TOOL_DIR = /home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus/tools
 VERSION = 1.0.0-beta
-abs_builddir = /home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg
-abs_srcdir = /home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg
-abs_top_builddir = /home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg
-abs_top_srcdir = /home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg
+abs_builddir = /home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus
+abs_srcdir = /home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus
+abs_top_builddir = /home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus
+abs_top_srcdir = /home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -344,7 +344,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} '/home/matheussines/Documentos/GRADUAÇÃO/SO II/so2ATT/syseg/build-aux/install-sh'
+install_sh = ${SHELL} /home/matheussines/Documentos/GRADUAÇÃO/SO2/mfDOS/so2-fernando-e-matheus/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
